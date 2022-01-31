@@ -1,4 +1,4 @@
-package main
+package types
 
 type Page struct {
 	Title string
