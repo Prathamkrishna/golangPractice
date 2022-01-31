@@ -4,7 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"randomgo/types"
+
+	"./types"
 
 	"github.com/gorilla/mux"
 )
@@ -33,6 +34,6 @@ func postDataToConsoleHandler(w http.ResponseWriter, r *http.Request) {
 	// requestBody, _ := ioutil.ReadAll(r.Body)
 	json.NewDecoder(r.Body).Decode(&posts)
 	// json.Unmarshal(requestBody, &posts)
-	fmt.Println(posts.message)
+	fmt.Println(posts)
 	// fmt.Printf("message: %s", requestBody)
 }
